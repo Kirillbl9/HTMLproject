@@ -1,0 +1,14 @@
+<html>
+<title>Login</title>
+<body>
+  <div>
+    <form method="post">
+        <table>
+            <tr><td><input type="text" name="name" /></td></tr>
+            <tr><td><input type="text" name="password" /></td></tr>
+        </table>
+       <button type="submit">go</button>
+    </form>
+      <div>
+</body>
+</html>

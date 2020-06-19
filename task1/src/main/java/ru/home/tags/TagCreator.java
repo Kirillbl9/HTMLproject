@@ -138,6 +138,18 @@ public class TagCreator {
         return new ContainTag("output").with(dc);
     }
 
+    public static ContainTag input() {
+        return new ContainTag("input");
+    }
+
+    public static ContainTag input(String text) {
+        return new ContainTag("input").withText(text);
+    }
+
+    public static ContainTag input(DomContent... dc) {
+        return new ContainTag("input").with(dc);
+    }
+
     public static ContainTag strong() {
         return new ContainTag("strong");
     }
@@ -245,4 +257,5 @@ public class TagCreator {
     public static ContainTag form(DomContent... dc) {
         return new ContainTag("form").with(dc);
     }
+
 }

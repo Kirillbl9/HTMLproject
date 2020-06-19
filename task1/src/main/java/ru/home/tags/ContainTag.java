@@ -22,9 +22,6 @@ public class ContainTag extends Tag<ContainTag> {
     }
 
     public ContainTag with(DomContent child) {
-        if (this == child) {
-            throw new RuntimeException("Cannot append a tag to itself.");
-        }
         if (child == null) {
             return this;
         }
@@ -44,9 +41,15 @@ public class ContainTag extends Tag<ContainTag> {
         return with(new Text(text));
     }
 
-    public String renderFormatted() throws IOException {
-        return renderFormatted(0);
+    public String renderFormatted() {
+        try {
+            return renderFormatted(0);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } return null;
     }
+
+
 
     static String rend(ContainTag tag, int level) throws IOException {
         return tag.renderFormatted(level);
